@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
+<bean id="guitar" class="com.zensar.spring.instruments.Guitar"></bean>
+<bean id="arijit" class="com.zensar.spring.performers.Instrumentalistic">
+  <property name="instrument" ref="guitar"></property>
+  <property name="song" value="taki taki"></property>
+</bean>
+<bean id="atif aslam" parent="arijit">
+   <property name="song" value="ham to udd gye"></property>
+</bean>
+<bean id="violin" class="com.zensar.spring.instruments.Violin"></bean>
+<bean id="sonu" parent="atif aslam">
+    <property name="instrument" ref="violin"></property>
+</bean>
+</beans>
