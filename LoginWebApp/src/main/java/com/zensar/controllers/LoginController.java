@@ -14,7 +14,7 @@ import com.zensar.services.UserService;
 public class LoginController {
     @Autowired
 	private UserService userService;
-    @RequestMapping("login")
+    @PostMapping("login")
     public String checkLogin(User user,ModelMap map)
     {
     	if(userService.validateUser(user)) //if login is true then add into database in the form of key and value and welcome(logic view name)
