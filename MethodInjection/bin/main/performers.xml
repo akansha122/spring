@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
+<bean id ="megicBox" class="com.zensar.spring.megicBoxs.MegicBoxImpl">
+  <replaced-method name="getContent" replacer="megicBoxReplacable"></replaced-method>
+</bean>
+<bean id="raghuveer" class="com.zensar.spring.performers.Megician">
+<property name="megicWords" value="khul ja sim sim"></property>
+<property name="megicBox" ref="megicBox"></property>
+</bean>
+<bean id="megicBoxReplacable" class="com.zensar.spring.replacers.MegicBoxReplacable"></bean>
+</beans>
